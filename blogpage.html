@@ -1,0 +1,27 @@
+<!--This is where jekyll will automatically drop in the head -->
+
+<section id="post">
+  <div class="grid-spaceBetween container">
+    {% for post in site.posts limit:1 %}
+      <div id="posts" class="col-7">
+        <a href="{{post.url}}">
+          <img class="featuredpic"src="{{post.featuredimg}}"/>
+          <h3> {{post.title}} </h3>
+          {{post.content}}
+        </a>
+      </div>
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- this is where jekyll will automatically drop in the footer -->

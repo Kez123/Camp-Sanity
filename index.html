@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<section id="upcoming" class="grid-spaceAround">
+  <div class="col-6">
+    <h3> Up Coming Events </h3>
+    <p> Our next adventure will be Oct 24th - Oct 26th, inclusive, at Lane
+    pool reserve. There will be kayaking, bushwalking, campfire and of course
+    smores!!! </p>
+
+  </div>
+
+  <div class="col-3">
+    <h2>
+      <a href="Register">
+        Register Your Interest!
+      </a>
+    </h2>
+  </div>
+
+  <div class="col-3">
+    <h4> Tutorials </h4>
+    <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/gAtS4L_lhv4" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+<!-- this is the close for up coming register interest and tutorials -->
+
+<section id="review">
+  <div class="grid-spaceBetween container">
+    {% for post in site.posts limit:1 %}
+      <div id="posts" class="col-7">
+        <a href="{{post.url}}">
+          <img class="featuredpic"src="{{post.featuredimg}}"/>
+          <h3> {{post.title}} </h3>
+          {{post.content}}
+        </a>
+      </div>
+    {% endfor %}
+
+    <div class="col-3">
+      {% for post in site.posts %}
+        <a href="{{post.url}}l">
+          <div class="flex-center review" style="background-image:url('{{post.featuredimg}}')">
+            <h3>{{post.title}} </h3>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
