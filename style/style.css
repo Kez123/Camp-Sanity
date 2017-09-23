@@ -108,7 +108,7 @@ input,textarea{
   width: 100%;
   text-align: right;
   font-size:1.3rem;
-  padding: 1% 5%;
+  padding: 1%;
 }
 #fixed-header h2 {
   text-align: left;
@@ -206,6 +206,7 @@ footer .copyright {
 /* About Page */
 .about img {
   margin-bottom: 5%;
+  text-align: justify;
 }
 
 /* Contact Page */
@@ -217,4 +218,9 @@ footer .copyright {
 .form {
   position: absolute;
   margin-right: 80px;
+}
+
+/*blog page sidebar*/
+.post {
+  text-align: justify;
 }
