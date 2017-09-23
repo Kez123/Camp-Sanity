@@ -1,21 +1,58 @@
 *{
   box-sizing: border-box;
-  /*border: 1px solid black;*/
+  margin: 0;
+  padding:0;
+  /*border: 1px solid yellow;*/
 }
 
 html{
   font-family: 'Arimo', sans-serif;
 }
 
+section,footer {
+  padding:5%;
+}
+
 img{
   max-width:100%;
 }
 
+hr {
+    border: none;
+    border: 1px solid green;
+    width: 2rem;
+    margin: 2rem auto;
+}
+
+/* Typography */
 a{
   color:#2ecc71;
   text-decoration: none;
-
 }
+
+h1{
+font-size: 2.7rem:
+}
+
+h2{
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h4{
+  font-size: 1.6rem;
+}
+
+
+p{
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 
 .youtube {
   width:100%;
@@ -32,6 +69,7 @@ a{
   float: left;
   width:33%;
   margin:3%;
+  clear:both;
 }
 
 .flex-center {
@@ -40,12 +78,21 @@ a{
   display:flex;
 }
 
+.padded {
+  padding: 2%;
+}
+
 .review {
   min-height: 7vw;
   width: 14vw;
   margin-left: auto;
   margin-bottom: 8%;
   background-size: cover;
+}
+
+input,textarea{
+  margin-bottom: 5%;
+  padding:2%
 }
 
 
@@ -68,11 +115,50 @@ a{
   width: 100%;
   text-align: right;
   font-size:1.3rem;
+  padding: 1% 5%;
+}
+#fixed-header h2 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+#fixed-header a {
+  color: white;
+  padding:9px;
+}
+#fixed-header #hamburger-icon{
+  display: none;
+}
+@media all and (max-width: 768px) {
+
+  #fixed-header nav{
+    display: none;
+  }
+  #fixed-header #hamburger-icon{
+    display: block;
+  }
 
 }
 
-#fixed-header a {
-  color: white;
+
+/* MOBILE MENU */
+#mobile-menu {
+  background-color: white; /* makes the background colour pink */
+  position: fixed; /* Makes sure it wont move - even if you scroll */
+  top: 0; /* Makes sure the mobile-menu sticks to the top of the screen */
+  left: 0; /* This makes sure the mobile menu sticks to the left of the screen */
+  width: 100%;/* Makes it wide */
+  height: 100%;/*Makes it tall */
+  display: none;/* hide mobile menu initially */
+  z-index: 999; /* Makes sure the mobile-menu is in the front of other elements */
+  text-align: center;
+}
+#mobile-menu a {
+  color: black;
+  display: block;
+  padding: 1vh;
+}
+#mobile-menu.mobile-menu-visible{
+  display: flex;
 }
 
 /* HERO */
@@ -82,11 +168,10 @@ a{
   background-image:url("/img/waterfall.jpg");
   background-position: center;
   background-size: cover;
+  text-align: center;
+  color:white;
 }
-#hero h1 {
-text-align: center;
-color:white;
-}
+
 
 /*    */
 #statement h3 {
@@ -95,16 +180,27 @@ color:white;
   font-weight: bold;
 }
 
-footer a {
-  padding: 0 10px;
+/* Footer */
 
+footer {
+  padding: 2% 5%;
+  background-color: rgb(240,240,240);
 }
+
+footer .fa {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+
+footer .copyright {
+  font-size: 1rem;
+  color: grey;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
 
 /*HELPERS */
-.container{
-  margin: 0 auto;
-  max-width: 1024px;
-}
 
 .add-object-fit{
 
@@ -112,4 +208,22 @@ footer a {
 
 .center{
   text-align: center;
+}
+
+/* About Page */
+
+.aboutpic{
+  width: 15%;
+}
+
+
+/* Contact Page */
+.contact p {
+  text-align: center;
+  margin: 5%;
+}
+
+.form {
+  position: absolute;
+  margin-right: 80px;
 }
