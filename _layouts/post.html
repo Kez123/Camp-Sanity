@@ -3,18 +3,12 @@ layout: default
 ---
 
 <section class= "grid">
-  <div class="col-7">
+  <div class="col-8 post">
     <h2> {{page.title}} </h2>
     <img src="{{page.featuredimg}}"/>
     {{content}}
   </div>
-  <div class="col-5">
-    {% for post in site.posts %}
-      <a href="{{post.url}}">
-        <div class="flex-center review" style="background-image:url('{{post.featuredimg}}')">
-          <h3>{{post.title}} </h3>
-        </div>
-      </a>
-    {% endfor %}
+  <div class="col-4 sidebar">
+        {% include sidebar.html %}
   </div>
 </section>
